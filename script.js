@@ -456,35 +456,49 @@ const restaurant = {
 // }
 
 //12 sets
-const orderSet = new Set([
-  'pizza',
-  'pizza',
-  'lemon',
-  'lemon',
-  'candy ',
-  'candy',
-]);
-console.log(orderSet);
-console.log(orderSet.has('pizza'));
-console.log(orderSet.has('kabir'));
-console.log(orderSet.delete('pizza'));
-console.log(orderSet);
-// console.log(orderSet.clear());
-console.log(orderSet.add('ram'));
+// const orderSet = new Set([
+//   'pizza',
+//   'pizza',
+//   'lemon',
+//   'lemon',
+//   'candy ',
+//   'candy',
+// ]);
+// console.log(orderSet);
+// console.log(orderSet.has('pizza'));
+// console.log(orderSet.has('kabir'));
+// console.log(orderSet.delete('pizza'));
+// console.log(orderSet);
+// // console.log(orderSet.clear());
+// console.log(orderSet.add('ram'));
 
-for (const order of orderSet) {
-  console.log();
-}
+// for (const order of orderSet) {
+//   console.log();
+// }
 
-// example
-const staff = ['waiter', 'chef', 'waiter', 'manager', 'waiter', 'chef'];
+// // example
+// const staff = ['waiter', 'chef', 'waiter', 'manager', 'waiter', 'chef'];
 
-const staffUnique = [...new Set(staff)];
-console.log(staffUnique);
-console.log(
-  new Set(['waiter', 'chef', 'waiter', 'manager', 'waiter', 'chef']).size
-);
+// const staffUnique = [...new Set(staff)];
+// console.log(staffUnique);
+// console.log(
+//   new Set(['waiter', 'chef', 'waiter', 'manager', 'waiter', 'chef']).size
+// );
 
 // 13 maps
 
-const rest 
+const rest = new Map();
+rest.set('name', 'taj hotel');
+rest.set(1, 'france, Itly ');
+rest.set(2, 'germany, gurgaon');
+console.log(rest);
+
+rest
+  .set('categories', [
+    'Focaccia',
+    'Bruschetta',
+    'Garlic Bread',
+    'Caprese Salad',
+  ])
+  .set('open', 11)
+  .set('close', 23).set;
