@@ -501,4 +501,8 @@ rest
     'Caprese Salad',
   ])
   .set('open', 11)
-  .set('close', 23).set;
+  .set('close', 23)
+  .set(true, 'we are open')
+  .set(false, 'we are closed');
+
+console.log(rest.get('name'));
