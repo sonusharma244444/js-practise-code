@@ -506,3 +506,6 @@ rest
   .set(false, 'we are closed');
 
 console.log(rest.get('name'));
+console.log(rest.get(1));
+console.log(rest.get(2));
+console.log(rest.get('categories'));
