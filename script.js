@@ -509,3 +509,37 @@ console.log(rest.get('name'));
 console.log(rest.get(1));
 console.log(rest.get(2));
 console.log(rest.get('categories'));
+
+const time = 21;
+console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+
+console.log(rest.has('categories'));
+rest.delete(2);
+console.log(rest.size);
+// rest.clear();
+
+const arr = [1, 2];
+rest.set(arr, 'test');
+console.log(rest);
+console.log(rest.get(arr));
+
+rest.set(document.querySelector('h1'), 'heading');
+
+// 14 maps iteration
+
+const question = new Map([
+  ['question', 'what is the best programming language in the world '],
+  [1, 'c'],
+  [2, 'java'],
+  [3, 'javascript'],
+  ['correct', 3],
+  [true, 'correct'],
+  [false, 'try again'],
+]);
+console.log(question);
+
+// convert object to map
+console.log(Object.entries(restaurant.openingHours));
+const hourMap = new Map(Object.entries(restaurant.openingHours));
+
+console.log(hourMap);
