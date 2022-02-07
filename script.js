@@ -487,59 +487,91 @@ const restaurant = {
 
 // 13 maps
 
-const rest = new Map();
-rest.set('name', 'taj hotel');
-rest.set(1, 'france, Itly ');
-rest.set(2, 'germany, gurgaon');
-console.log(rest);
+// const rest = new Map();
+// rest.set('name', 'taj hotel');
+// rest.set(1, 'france, Itly ');
+// rest.set(2, 'germany, gurgaon');
+// console.log(rest);
 
-rest
-  .set('categories', [
-    'Focaccia',
-    'Bruschetta',
-    'Garlic Bread',
-    'Caprese Salad',
-  ])
-  .set('open', 11)
-  .set('close', 23)
-  .set(true, 'we are open')
-  .set(false, 'we are closed');
+// rest
+//   .set('categories', [
+//     'Focaccia',
+//     'Bruschetta',
+//     'Garlic Bread',
+//     'Caprese Salad',
+//   ])
+//   .set('open', 11)
+//   .set('close', 23)
+//   .set(true, 'we are open')
+//   .set(false, 'we are closed');
 
-console.log(rest.get('name'));
-console.log(rest.get(1));
-console.log(rest.get(2));
-console.log(rest.get('categories'));
+// console.log(rest.get('name'));
+// console.log(rest.get(1));
+// console.log(rest.get(2));
+// console.log(rest.get('categories'));
 
-const time = 21;
-console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+// const time = 21;
+// console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
 
-console.log(rest.has('categories'));
-rest.delete(2);
-console.log(rest.size);
-// rest.clear();
+// console.log(rest.has('categories'));
+// rest.delete(2);
+// console.log(rest.size);
+// // rest.clear();
 
-const arr = [1, 2];
-rest.set(arr, 'test');
-console.log(rest);
-console.log(rest.get(arr));
+// const arr = [1, 2];
+// rest.set(arr, 'test');
+// console.log(rest);
+// console.log(rest.get(arr));
 
-rest.set(document.querySelector('h1'), 'heading');
+// rest.set(document.querySelector('h1'), 'heading');
 
 // 14 maps iteration
 
-const question = new Map([
-  ['question', 'what is the best programming language in the world '],
-  [1, 'c'],
-  [2, 'java'],
-  [3, 'javascript'],
-  ['correct', 3],
-  [true, 'correct'],
-  [false, 'try again'],
-]);
-console.log(question);
+// const question = new Map([
+//   ['question', 'what is the best programming language in the world '],
+//   [1, 'c'],
+//   [2, 'java'],
+//   [3, 'javascript'],
+//   ['correct', 3],
+//   [true, 'correct'],
+//   [false, 'try again'],
+// ]);
+// console.log(question);
 
-// convert object to map
-console.log(Object.entries(restaurant.openingHours));
-const hourMap = new Map(Object.entries(restaurant.openingHours));
+// // convert object to map
+// console.log(Object.entries(restaurant.openingHours));
+// const hourMap = new Map(Object.entries(restaurant.openingHours));
 
-console.log(hourMap);
+// console.log(hourMap);
+
+// iteration
+
+// // quiz app
+// console.log(question.get('question'));
+// for (const [key, value] of question) {
+//   if (typeof key === 'number') {
+//     console.log(`answer ${key} : ${value}`);
+//   }
+// }
+// // const answer = Number(prompt('your answer'));
+// // console.log(answer);
+
+// console.log(question.get(question.get('correct') === answer));
+
+// convert map to array
+// console.log([...question]);
+// console.log(question.entries());
+// console.log(question.keys());
+// console.log(question.values(true));
+
+// 15   working with strings part-1
+const airLine = 'kingfisher';
+const plane = 'A420';
+
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
+console.log(plane[3]);
+
+console.log(airLine.length);
+console.log('b4556'.length);
