@@ -721,3 +721,15 @@ const maskCreditCard = function (number) {
 
 console.log(maskCreditCard(433225855445885));
 console.log(maskCreditCard('788222263114555444'));
+
+// repeat strings
+const message2 = 'bad weather... all departures delayed...  ';
+console.log(message2.repeat(5));
+
+const planesInline = function (n) {
+  console.log(`there is ${n} planes in line ${'✈'.repeat(n)}`);
+};
+
+planesInline(5);
+planesInline(10);
+planesInline(65);
