@@ -565,13 +565,159 @@ const restaurant = {
 // console.log(question.values(true));
 
 // 15   working with strings part-1
-const airLine = 'kingfisher';
-const plane = 'A420';
+// const airLine = 'TAP Air portugal';
+// const plane = 'A420 rama';
 
-console.log(plane[0]);
-console.log(plane[1]);
-console.log(plane[2]);
-console.log(plane[3]);
+// console.log(plane[0]);
+// console.log(plane[1]);
+// console.log(plane[2]);
+// console.log(plane[3]);
+// console.log('br34'[0]);
 
-console.log(airLine.length);
-console.log('b4556'.length);
+// console.log(airLine.length);
+// console.log('b4556'.length);
+
+// console.log(airLine.indexOf('r'));
+// console.log(airLine.lastIndexOf('r'));
+// console.log(airLine.indexOf('kabir'));
+
+// // slice
+// console.log(airLine.slice(4));
+// console.log(plane.slice(4, 8));
+
+// console.log(airLine.slice(0, airLine.indexOf(' ')));
+// console.log(airLine.slice(airLine.lastIndexOf(' ') + 1));
+
+// console.log(airLine.slice(-2));
+
+// const checkMiddleSeat = function (seat) {
+//   // b and e are middle seats
+//   const s = seat.slice(-1);
+//   if (s === 'b' || s === 'e') {
+//     console.log('you got the middle seat');
+//   } else {
+//     console.log('you got lucky');
+//   }
+// };
+
+// checkMiddleSeat('11b');
+// checkMiddleSeat('23c');
+// checkMiddleSeat('3e');
+
+// //16 working with string part 2
+// const airline = 'Tap Air Portugal';
+
+// console.log(airline.toLowerCase());
+// console.log(airline.toUpperCase());
+
+// // fix capitalization in name
+
+// const passenger = 'sOnu';
+// const passengerLower = passenger.toLowerCase();
+// const passengerCorrect = passenger[0].toUpperCase() + passengerLower.slice(1);
+
+// console.log(passengerCorrect);
+
+//  MY practise code
+// const passengerFunction = function (ask) {
+//   const correct = ask.toLowerCase();
+
+//   const correctAnswer = correct[0].toUpperCase() + correct.slice(1);
+//   console.log(correctAnswer);
+// };
+
+// const answer = prompt('your name');
+// passengerFunction(answer);
+
+// comparing emails
+
+// const email = 'hello@sonu.io';
+// const loginMail = ' hello@Sonu.io \n';
+
+// const lowerEmail = loginMail.toLowerCase();
+// // const trimmedEmail = loginMail.trim();
+// // console.log(trimmedEmail);
+
+// const normalizedEmail = loginMail.toLowerCase().trim();
+// console.log(normalizedEmail);
+// console.log(email === normalizedEmail);
+
+// // replaceing
+// const priceUS = '288,88$';
+// const priceINR = priceUS.replace('$', '@').replace(',', '.');
+// console.log(priceINR);
+
+// const annoucement = 'all passenger come to boarding door 23. boarding door 23!';
+
+// console.log(annoucement.replace(/door/g, 'gate'));
+
+// console.log(annoucement.replaceAll('door', 'gate'));
+
+// // booleans
+// const plane = 'Airbus A323neo';
+// console.log(plane.includes('A323'));
+// console.log(plane.includes('BORING '));
+
+// console.log(plane.startsWith('Air'));
+
+// if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
+//   console.log('its part of new plane family');
+// }
+
+// // practise exerices
+// const checkBaggage = function (items) {
+//   const baggage = items.toLowerCase();
+//   if (baggage.includes('knife') || baggage.includes('gun')) {
+//     console.log('your are not allowed in plane ');
+//   } else {
+//     console.log('your are allowed in plane ');
+//   }
+// };
+
+// checkBaggage('i have a laptop, some Food and a pocket Knife');
+
+// checkBaggage('socks and camera');
+
+// checkBaggage('got some snacks and a gun for protection');
+
+//17  working with strings part 3
+
+// split and joins
+
+// console.log('a+very+nice+string'.split('+'));
+
+// const [firstName, lastName] = 'sonu sharma'.split(' ');
+
+// const newName = ['MR.', 'SONU', 'SHARMA '].join(' ');
+
+// console.log(newName);
+
+const capitalization = function (name) {
+  const names = name.split(' ');
+
+  const upperCase = [];
+
+  for (const n of names) {
+    // upperCase.push(n[0].toUpperCase() + n.slice(1));
+    upperCase.push(n.replace(n[0], n[0].toUpperCase()));
+  }
+  console.log(upperCase);
+  console.log(upperCase.join(' '));
+};
+
+capitalization('jessica ann smith davis');
+capitalization('sonu sharma');
+
+//padding
+const message = 'go to gate 23';
+console.log(message.padStart(23, '+'));
+console.log('ending'.padStart(50, '+'));
+
+const maskCreditCard = function (number) {
+  const str = number + '';
+  const last = str.slice(-4);
+  return last.padStart(str.length, '*');
+};
+
+console.log(maskCreditCard(433225855445885));
+console.log(maskCreditCard('788222263114555444'));
