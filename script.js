@@ -692,44 +692,64 @@ const restaurant = {
 
 // console.log(newName);
 
-const capitalization = function (name) {
-  const names = name.split(' ');
+// const capitalization = function (name) {
+//   const names = name.split(' ');
 
-  const upperCase = [];
+//   const upperCase = [];
 
-  for (const n of names) {
-    // upperCase.push(n[0].toUpperCase() + n.slice(1));
-    upperCase.push(n.replace(n[0], n[0].toUpperCase()));
-  }
-  console.log(upperCase);
-  console.log(upperCase.join(' '));
-};
+//   for (const n of names) {
+//     // upperCase.push(n[0].toUpperCase() + n.slice(1));
+//     upperCase.push(n.replace(n[0], n[0].toUpperCase()));
+//   }
+//   console.log(upperCase);
+//   console.log(upperCase.join(' '));
+// };
 
-capitalization('jessica ann smith davis');
-capitalization('sonu sharma');
+// capitalization('jessica ann smith davis');
+// capitalization('sonu sharma');
 
-//padding
-const message = 'go to gate 23';
-console.log(message.padStart(23, '+'));
-console.log('ending'.padStart(50, '+'));
+// //padding
+// const message = 'go to gate 23';
+// console.log(message.padStart(23, '+'));
+// console.log('ending'.padStart(50, '+'));
 
-const maskCreditCard = function (number) {
-  const str = number + '';
-  const last = str.slice(-4);
-  return last.padStart(str.length, '*');
-};
+// const maskCreditCard = function (number) {
+//   const str = number + '';
+//   const last = str.slice(-4);
+//   return last.padStart(str.length, '*');
+// };
 
-console.log(maskCreditCard(433225855445885));
-console.log(maskCreditCard('788222263114555444'));
+// console.log(maskCreditCard(433225855445885));
+// console.log(maskCreditCard('788222263114555444'));
 
-// repeat strings
-const message2 = 'bad weather... all departures delayed...  ';
-console.log(message2.repeat(5));
+// // repeat strings
+// const message2 = 'bad weather... all departures delayed...  ';
+// console.log(message2.repeat(5));
 
-const planesInline = function (n) {
-  console.log(`there is ${n} planes in line ${'✈'.repeat(n)}`);
-};
+// const planesInline = function (n) {
+//   console.log(`there is ${n} planes in line ${'✈'.repeat(n)}`);
+// };
 
-planesInline(5);
-planesInline(10);
-planesInline(65);
+// planesInline(5);
+// planesInline(10);
+// planesInline(65);
+
+// 18 string methods practise
+const flights =
+  '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
+
+// 🔴 Delayed Departure from FAO to TXL (11h25)
+//              Arrival from BRU to FAO (11h45)
+//   🔴 Delayed Arrival from HEL to FAO (12h05)
+//            Departure from FAO to LIS (12h30)
+
+const getCode = str => str.slice(0, 3).toUpperCase();
+
+for (const flight of flights.split('+')) {
+  const [type, from, to, time] = flight.split(';');
+  const output = `${type.startsWith('_Delayed') ? '🔴' : ''} ${type.replaceAll(
+    '_',
+    ' '
+  )} ${getCode(from)} ${getCode(to)} (${time.replace(':', 'h')})`.padStart(40);
+  console.log(output);
+}
